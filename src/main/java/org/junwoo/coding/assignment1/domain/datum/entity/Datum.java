@@ -25,6 +25,7 @@ public class Datum {
   @Column(nullable = false)
   private String serialNumber;
 
+  @Column(nullable = false)
   private Long datumValue;
 
 }
