@@ -28,6 +28,9 @@ public class Device {
   private Long id;
 
   @Column(nullable = false)
+  private String serialNumber;
+
+  @Column(nullable = false)
   private Long stationGroupId;
 
   @CreatedDate
