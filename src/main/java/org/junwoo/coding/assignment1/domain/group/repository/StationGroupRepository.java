@@ -5,4 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface StationGroupRepository extends JpaRepository<StationGroup, Long> {
 
+  StationGroup findBySerialNumber(String serialNumber);
+
 }

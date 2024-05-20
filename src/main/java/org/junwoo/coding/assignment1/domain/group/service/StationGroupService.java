@@ -2,6 +2,7 @@ package org.junwoo.coding.assignment1.domain.group.service;
 
 import lombok.RequiredArgsConstructor;
 import org.junwoo.coding.assignment1.domain.group.dto.StationGroupCreateResponseDto;
+import org.junwoo.coding.assignment1.domain.group.dto.StationGroupReadResponseDto;
 import org.junwoo.coding.assignment1.domain.group.entity.StationGroup;
 import org.junwoo.coding.assignment1.domain.group.repository.StationGroupRepository;
 import org.springframework.stereotype.Service;
@@ -22,4 +23,8 @@ public class StationGroupService {
     return new StationGroupCreateResponseDto(stationGroup);
   }
 
+  public StationGroupReadResponseDto readStationGroup(final String serialNumber) {
+    StationGroup stationGroup = stationGroupRepository.findBySerialNumber(serialNumber);
+    return new StationGroupReadResponseDto(stationGroup);
+  }
 }
